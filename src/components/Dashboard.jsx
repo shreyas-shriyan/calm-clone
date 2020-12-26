@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style.module.css'
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa"
+import Login from './Login'
 
-export default function Dashboard() {
+export default function Dashboard(props) {
+
+    const [loginModal, setLoginModal] = useState(false)
+
+    console.log(loginModal)
+
+    const handleClose = () => {
+        setLoginModal(false)
+    }
+
     return (
         <div>
             <div className={styles.overlay}>
@@ -12,7 +22,7 @@ export default function Dashboard() {
                     </div>
                     <div className={styles.navlinks}>
                         <button>For Business</button>
-                        <button>Login</button>
+                        <button onClick={() => setLoginModal(true)}>Login</button>
                         <button style={{ border: "2px solid white" }} className={styles.tryButton}>Try Calm for Free</button>
                     </div>
                 </div>
@@ -57,6 +67,9 @@ export default function Dashboard() {
                 <div style={{ paddingBottom: "50px", textAlign: "center", color: "rgba(255, 255, 255,0.5)" }}>Copyright © 2020 Calm. All rights reserved</div>
             </div>
 
+            <div>
+                {loginModal ? <Login {...props} handleClose={handleClose}></Login> : null}
+            </div>
         </div>
     )
 }
