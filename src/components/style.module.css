@@ -1,0 +1,68 @@
+.navlinks{
+    display: flex;
+    align-items: center;
+}
+
+.navlinks > button{
+    margin: 0 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: medium;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.navlinks > button:hover{
+    background-color: rgba(59, 59, 59, 0.447);
+}
+
+.overlay{
+    background: linear-gradient(268deg, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0.6) 87%),url(https://res.cloudinary.com/calm-com/image/upload/f_auto,c_scale,w_2560,dpr_auto,q_auto/v1582139698/jasper-lake.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.content {
+    margin: 20vh 7.5%;
+    padding-left: 1.5%;
+}
+
+.getStartedbutton{
+    width: 324px;
+    height: 60px;
+    background: linear-gradient(rgb(96, 180, 231) 0%, rgb(100, 97, 224) 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.footer{
+    background-color: rgb(113, 113, 113);
+    padding: 6vh 9%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.footerColumn > div{
+    color: white;
+    margin: 17px 0;
+    font-weight: 250;
+}
+
+.footerIcons{
+    display: flex;
+    flex-direction: row;
+}
+
+.footerIcons > svg{
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin: 17px 8.5px;
+}
