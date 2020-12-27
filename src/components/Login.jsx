@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../redux/actions';
 
 export default function Login(props) {
 
@@ -8,12 +10,15 @@ export default function Login(props) {
     const [password, setPassword] = useState("")
 
     const history = useHistory()
+    const dispatch = useDispatch();
 
+    /* handle login */
     const handleSubmit = (e) => {
         e.preventDefault()
         if (username === "shreyas") {
             if (password === "12345678") {
                 props.handleClose()
+                dispatch(loginUser(username));
                 history.push("/user")
             }
             else {
@@ -23,6 +28,7 @@ export default function Login(props) {
         else if (username === "admin") {
             if (password === "12345678") {
                 props.handleClose()
+                dispatch(loginUser(username));
                 history.push("/admin")
             }
             else {
@@ -40,8 +46,8 @@ export default function Login(props) {
             <div style={{ margin: "0 2vw" }}>
                 <div style={{ fontSize: "35px" }} >Log into your account</div>
                 <form className={styles.loginForm} style={{ display: "flex", flexDirection: "column" }} onSubmit={(e) => handleSubmit(e)}>
-                    <input required onChange={(e) => setUsername(e.target.value)}></input>
-                    <input required onChange={(e) => setPassword(e.target.value)} type="password"></input>
+                    <input placeholder="Username" required onChange={(e) => setUsername(e.target.value)}></input>
+                    <input placeholder="Password" required onChange={(e) => setPassword(e.target.value)} type="password"></input>
                     <div style={{ fontSize: "18px", fontWeight: "250", margin: "20px 0" }}>Forgot your password?<span style={{ fontWeight: "bold", marginLeft: "8px", textDecoration: "underline" }}>Click here</span></div>
                     <button type="submit" className={styles.loginButton}>Log in</button>
                     <div style={{ fontSize: "18px", fontWeight: "250", marginTop: "30px" }}>By continuing to use Calm, you agree to our<span style={{ fontWeight: "bold", marginLeft: "8px", textDecoration: "underline" }}>Terms</span></div>

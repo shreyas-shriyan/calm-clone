@@ -1,11 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import authReducer from './auth/reducer';
-import searchReducer from './search/reducer';
+import reducer from './reducer';
 
 const rootReducer = combineReducers({
-    auth: authReducer,
-    search: searchReducer
+    state: reducer
 });
 
 let composeEnhancers = compose;
@@ -16,7 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
         : compose;
 }
 
-const enhancer = composeEnhancers();
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const store = createStore(rootReducer, enhancer);
 

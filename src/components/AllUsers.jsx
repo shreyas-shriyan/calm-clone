@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { Line } from 'react-chartjs-2';
-import data from './users'
+import data from './users';
 
 export default function AllUsers(props) {
     const [select, setSelect] = useState("0")
     const range = ["1 day", "1 month", "3 months", "6 months"]
+
+
     return (
         <div style={{ width: "82vw", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
 

@@ -17,7 +17,7 @@
     height: 38.88px;
 }
 
-.sidebar > button {
+.normalButton{
     margin: 20px 0;
     color: white;
     background: linear-gradient(268deg, rgba(0, 0, 0, 0.666) 22%, rgba(0, 0, 0, 0.6) 87%);
@@ -28,4 +28,18 @@
     width : 100%;
     border: none;
     font-weight: 700;
+}
+
+.currentButton{
+    margin: 20px 0;
+    color: white;
+    background: linear-gradient(268deg, rgba(0, 0, 0, 0.666) 22%, rgba(0, 0, 0, 0.6) 87%);
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 20px;
+    text-align: center;
+    width : 100%;
+    border: none;
+    font-weight: bold;
+    border: 1px solid white;
 }
