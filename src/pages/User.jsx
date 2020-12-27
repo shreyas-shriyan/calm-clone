@@ -55,7 +55,7 @@ export default function User(props) {
                     <div>{`Sad Days : ${state[`${select === "7" ? 0 : 1}`].datasets[0].data.filter((item) => item === 1).length}`}</div>
                     <div style={{ display: "flex", alignItems: "center" }}>
                         <div style={{ marginRight: "10px" }} >Range :</div>
-                        <select style={{ borderRadius: "20px", padding: "5px" }} onChange={(e) => setSelect(e.target.value)}  >
+                        <select style={{ borderRadius: "20px", padding: "5px", outline: "none" }} onChange={(e) => setSelect(e.target.value)}  >
                             <option value="7" >7 days</option>
                             <option value="30" >1 month</option>
                         </select>
