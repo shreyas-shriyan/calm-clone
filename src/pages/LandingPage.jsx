@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import styles from './style.module.css'
+import styles from './Landing.module.css'
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa"
-import Login from './Login'
+import Login from '../components/Login'
 
 export default function Dashboard(props) {
 
     const [loginModal, setLoginModal] = useState(false)
 
-    console.log(loginModal)
-
+    /* handle login modal close */
     const handleClose = () => {
         setLoginModal(false)
     }
@@ -32,6 +31,8 @@ export default function Dashboard(props) {
                     <button className={styles.getStartedbutton} >Get Started</button>
                 </div>
             </div>
+
+            {/* footer */}
             <div style={{ backgroundColor: 'rgb(113, 113, 113)' }}>
                 <div className={styles.footer} >
                     <div className={styles.footerColumn}>
@@ -67,6 +68,7 @@ export default function Dashboard(props) {
                 <div style={{ paddingBottom: "50px", textAlign: "center", color: "rgba(255, 255, 255,0.5)" }}>Copyright © 2020 Calm. All rights reserved</div>
             </div>
 
+            {/* Login Modal */}
             <div>
                 {loginModal ? <Login {...props} handleClose={handleClose}></Login> : null}
             </div>

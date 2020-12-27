@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import styles from './style.module.css'
+import styles from './Dashboard.module.css'
 import { Line } from 'react-chartjs-2';
 
 export default function User(props) {
 
-    const [select, setSelect] = useState(7)
+    const [select, setSelect] = useState("7")
 
+    /* dummy data for the user */
     const state = [{
         labels: ['Sunday', 'Monday', 'Tuesday',
             'Wednesday', 'Thrusday', "Friday", "Saturday"],
@@ -38,7 +39,9 @@ export default function User(props) {
     return (
         <div className={styles.userOverlay}>
             <div className={styles.sidebar} >
-                <img height="38.88px" src="https://www.calm.com/_n/images/calm-logo.png" alt="logo" ></img>
+                <img src="https://www.calm.com/_n/images/calm-logo.png" alt="logo" ></img>
+                <button>Mood Data</button>
+                <button onClick={() => alert("logout")} >Logout</button>
             </div>
 
             <div style={{ width: "82vw", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
@@ -46,10 +49,13 @@ export default function User(props) {
                 <div style={{ width: "63%", display: "flex", backgroundColor: "white", margin: "40px auto 0 auto", padding: "15px", borderRadius: "30px", justifyContent: "space-between" }} >
                     <div>{`Happy Days : ${state[`${select === "7" ? 0 : 1}`].datasets[0].data.filter((item) => item === 5).length}`}</div>
                     <div>{`Sad Days : ${state[`${select === "7" ? 0 : 1}`].datasets[0].data.filter((item) => item === 1).length}`}</div>
-                    <select onChange={(e) => setSelect(e.target.value)}  >
-                        <option value="7" >7 days</option>
-                        <option value="30" >1 month</option>
-                    </select>
+                    <div style={{ display: "flex" }}>
+                        <div style={{ marginRight: "10px" }} >Range :</div>
+                        <select onChange={(e) => setSelect(e.target.value)}  >
+                            <option value="7" >7 days</option>
+                            <option value="30" >1 month</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div style={{ width: "60%", margin: "auto", backgroundColor: "white", padding: "35px", borderRadius: "30px" }} >
@@ -76,6 +82,6 @@ export default function User(props) {
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }

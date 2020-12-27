@@ -1,0 +1,64 @@
+.loginModal{
+    border-radius: 1vw;
+    position: fixed;
+    height: 76vh;
+    width: 35vw;
+    top: 10vh;
+    left: 32.5vw;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm > input{
+    font-size: 20px;
+    margin-top: 30px;
+    height: 45px;
+}
+
+.loginButton{
+    background-color: rgb(83, 212, 119);
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* Dashboard styles */
+
+.userOverlay{
+    background: url(https://res.cloudinary.com/calm-com/image/upload/f_auto,c_scale,w_2560,dpr_auto,q_auto/v1582139698/jasper-lake.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+}
+
+.sidebar{
+    background: linear-gradient(268deg, rgba(0, 0, 0, 0.475) 22%, rgba(0, 0, 0, 0.6) 87%);
+    width : 18vw;
+    padding : 30px;
+}
+
+.sidebar > img {
+    height: 38.88px;
+}
+
+.sidebar > button {
+    margin: 20px 0;
+    color: white;
+    background: linear-gradient(268deg, rgba(0, 0, 0, 0.666) 22%, rgba(0, 0, 0, 0.6) 87%);
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 17px;
+    text-align: center;
+    width : 100%;
+    border: none;
+    font-weight: 700;
+}

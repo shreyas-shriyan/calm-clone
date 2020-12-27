@@ -101,20 +101,3 @@
     font-weight: 900;
     font-size: 20px;
 }
-
-.userOverlay{
-    background: url(https://res.cloudinary.com/calm-com/image/upload/f_auto,c_scale,w_2560,dpr_auto,q_auto/v1582139698/jasper-lake.jpg);
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-}
-
-.sidebar{
-    background: linear-gradient(268deg, rgba(0, 0, 0, 0.475) 22%, rgba(0, 0, 0, 0.6) 87%);
-    width : 18vw;
-}
-
-.sidebar > img {
-    height: 38.88px;
-    padding: 20px;
-}
