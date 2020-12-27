@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styles from './styles.module.css'
 import { Line } from 'react-chartjs-2';
 import data from './users';
 

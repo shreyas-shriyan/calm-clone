@@ -28,6 +28,7 @@
     width : 100%;
     border: none;
     font-weight: 700;
+    outline: none;
 }
 
 .currentButton{
@@ -42,4 +43,5 @@
     border: none;
     font-weight: bold;
     border: 1px solid white;
+    outline: none;
 }
